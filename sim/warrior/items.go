@@ -149,7 +149,7 @@ var ItemSetMoltenGiantWarplate = core.NewItemSet(core.ItemSet{
 				Name:           "Fiery Attack Trigger",
 				ActionID:       actionID,
 				Callback:       core.CallbackOnSpellHitDealt,
-				ClassSpellMask: SpellMaskMortalStrike | SpellMaskRagingBlow,
+				ClassSpellMask: SpellMaskMortalStrike | SpellMaskRagingBlow | SpellMaskRagingBlowOh,
 				ProcChance:     0.3,
 				Outcome:        core.OutcomeLanded,
 				Handler: func(sim *core.Simulation, spell *core.Spell, result *core.SpellResult) {

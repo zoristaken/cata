@@ -15,7 +15,7 @@ func (war *FuryWarrior) RegisterRagingBlow() {
 		ActionID:       ragingBlowActionID.WithTag(2),
 		SpellSchool:    core.SpellSchoolPhysical,
 		ProcMask:       core.ProcMaskMeleeOHSpecial,
-		ClassSpellMask: warrior.SpellMaskRagingBlow | warrior.SpellMaskSpecialAttack,
+		ClassSpellMask: warrior.SpellMaskRagingBlowOh,
 		Flags:          core.SpellFlagMeleeMetrics | core.SpellFlagIncludeTargetBonusDamage | core.SpellFlagNoOnCastComplete,
 
 		DamageMultiplier: 1.0,
@@ -33,7 +33,7 @@ func (war *FuryWarrior) RegisterRagingBlow() {
 		SpellSchool:    core.SpellSchoolPhysical,
 		ProcMask:       core.ProcMaskMeleeSpecial,
 		Flags:          core.SpellFlagMeleeMetrics | core.SpellFlagIncludeTargetBonusDamage | core.SpellFlagAPL,
-		ClassSpellMask: warrior.SpellMaskRagingBlow | warrior.SpellMaskSpecialAttack,
+		ClassSpellMask: warrior.SpellMaskRagingBlow,
 
 		RageCost: core.RageCostOptions{
 			Cost:   20,

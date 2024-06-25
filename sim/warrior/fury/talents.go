@@ -171,7 +171,7 @@ func (war *FuryWarrior) applyBloodsurge() {
 	})
 
 	damageMod := war.AddDynamicMod(core.SpellModConfig{
-		ClassMask:  warrior.SpellMaskSlam,
+		ClassMask:  warrior.SpellMaskSlam | warrior.SpellMaskSlamOh,
 		Kind:       core.SpellMod_DamageDone_Pct,
 		FloatValue: 0.2,
 	})

@@ -23,7 +23,7 @@ func (warrior *Warrior) RegisterSlamSpell() {
 		ActionID:       slamActionID.WithTag(2),
 		SpellSchool:    core.SpellSchoolPhysical,
 		ProcMask:       core.ProcMaskMeleeOHSpecial,
-		ClassSpellMask: SpellMaskSlam | SpellMaskSpecialAttack,
+		ClassSpellMask: SpellMaskSlamOh,
 		Flags:          core.SpellFlagMeleeMetrics | core.SpellFlagIncludeTargetBonusDamage | core.SpellFlagNoOnCastComplete,
 
 		DamageMultiplier: weaponDamageConfig.CalcSpellDamagePct(),
@@ -41,7 +41,7 @@ func (warrior *Warrior) RegisterSlamSpell() {
 		SpellSchool:    core.SpellSchoolPhysical,
 		ProcMask:       core.ProcMaskMeleeMHSpecial,
 		Flags:          core.SpellFlagMeleeMetrics | core.SpellFlagIncludeTargetBonusDamage | core.SpellFlagAPL,
-		ClassSpellMask: SpellMaskSlam | SpellMaskSpecialAttack,
+		ClassSpellMask: SpellMaskSlam,
 
 		RageCost: core.RageCostOptions{
 			Cost:   15,

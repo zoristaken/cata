@@ -73,7 +73,7 @@ func (war *ArmsWarrior) applyImpale() {
 	}
 
 	war.AddStaticMod(core.SpellModConfig{
-		ClassMask:  warrior.SpellMaskMortalStrike | warrior.SpellMaskSlam | warrior.SpellMaskOverpower,
+		ClassMask:  warrior.SpellMaskMortalStrike | warrior.SpellMaskSlam | warrior.SpellMaskSlamOh | warrior.SpellMaskOverpower,
 		Kind:       core.SpellMod_CritMultiplier_Pct,
 		FloatValue: 0.1 * float64(war.Talents.Impale),
 	})
@@ -91,7 +91,7 @@ func (war *ArmsWarrior) applyImprovedSlam() {
 	})
 
 	war.AddStaticMod(core.SpellModConfig{
-		ClassMask:  warrior.SpellMaskSlam,
+		ClassMask:  warrior.SpellMaskSlam | warrior.SpellMaskSlamOh,
 		Kind:       core.SpellMod_DamageDone_Flat,
 		FloatValue: 0.1 * float64(war.Talents.ImprovedSlam),
 	})

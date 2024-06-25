@@ -15,7 +15,7 @@ func (warrior *Warrior) RegisterHeroicStrikeSpell() {
 		SpellSchool:    core.SpellSchoolPhysical,
 		ProcMask:       core.ProcMaskMeleeMHSpecial,
 		Flags:          core.SpellFlagAPL | core.SpellFlagMeleeMetrics | core.SpellFlagIncludeTargetBonusDamage,
-		ClassSpellMask: SpellMaskHeroicStrike | SpellMaskSpecialAttack,
+		ClassSpellMask: SpellMaskHeroicStrike,
 
 		RageCost: core.RageCostOptions{
 			Cost:   30,
@@ -61,7 +61,7 @@ func (warrior *Warrior) RegisterCleaveSpell() {
 		SpellSchool:    core.SpellSchoolPhysical,
 		ProcMask:       core.ProcMaskMeleeMHSpecial,
 		Flags:          core.SpellFlagAPL | core.SpellFlagMeleeMetrics | core.SpellFlagIncludeTargetBonusDamage,
-		ClassSpellMask: SpellMaskCleave | SpellMaskSpecialAttack,
+		ClassSpellMask: SpellMaskCleave,
 
 		RageCost: core.RageCostOptions{
 			Cost: 30,

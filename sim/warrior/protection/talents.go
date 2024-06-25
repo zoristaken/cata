@@ -122,7 +122,7 @@ func (war *ProtectionWarrior) applyImpendingVictory() {
 		SpellSchool:    core.SpellSchoolPhysical,
 		ProcMask:       core.ProcMaskMeleeMHSpecial,
 		Flags:          core.SpellFlagAPL | core.SpellFlagMeleeMetrics | core.SpellFlagIncludeTargetBonusDamage,
-		ClassSpellMask: warrior.SpellMaskVictoryRush | warrior.SpellMaskSpecialAttack,
+		ClassSpellMask: warrior.SpellMaskVictoryRush,
 
 		Cast: core.CastConfig{
 			DefaultCast: core.Cast{

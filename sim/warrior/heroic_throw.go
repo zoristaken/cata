@@ -14,7 +14,7 @@ func (warrior *Warrior) RegisterHeroicThrow() {
 		SpellSchool:    core.SpellSchoolPhysical,
 		ProcMask:       core.ProcMaskMeleeMHSpecial,
 		Flags:          core.SpellFlagMeleeMetrics | core.SpellFlagAPL,
-		ClassSpellMask: SpellMaskHeroicThrow | SpellMaskSpecialAttack,
+		ClassSpellMask: SpellMaskHeroicThrow,
 
 		Cast: core.CastConfig{
 			DefaultCast: core.Cast{

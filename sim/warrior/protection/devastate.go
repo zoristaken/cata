@@ -15,7 +15,7 @@ func (war *ProtectionWarrior) RegisterDevastate() {
 		SpellSchool:    core.SpellSchoolPhysical,
 		ProcMask:       core.ProcMaskMeleeMHSpecial,
 		Flags:          core.SpellFlagMeleeMetrics | core.SpellFlagAPL,
-		ClassSpellMask: warrior.SpellMaskDevastate | warrior.SpellMaskSpecialAttack,
+		ClassSpellMask: warrior.SpellMaskDevastate,
 
 		RageCost: core.RageCostOptions{
 			Cost:   15,

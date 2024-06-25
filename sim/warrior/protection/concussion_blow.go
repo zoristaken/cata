@@ -17,7 +17,7 @@ func (war *ProtectionWarrior) RegisterConcussionBlow() {
 		SpellSchool:    core.SpellSchoolPhysical,
 		ProcMask:       core.ProcMaskMeleeMHSpecial,
 		Flags:          core.SpellFlagMeleeMetrics | core.SpellFlagIncludeTargetBonusDamage | core.SpellFlagAPL,
-		ClassSpellMask: warrior.SpellMaskConcussionBlow | warrior.SpellMaskSpecialAttack,
+		ClassSpellMask: warrior.SpellMaskConcussionBlow,
 
 		RageCost: core.RageCostOptions{
 			Cost:   15,

@@ -16,7 +16,7 @@ func (warrior *Warrior) RegisterThunderClapSpell() {
 		SpellSchool:    core.SpellSchoolPhysical,
 		ProcMask:       core.ProcMaskMeleeMHSpecial,
 		Flags:          core.SpellFlagIncludeTargetBonusDamage | core.SpellFlagAPL,
-		ClassSpellMask: SpellMaskThunderClap | SpellMaskSpecialAttack,
+		ClassSpellMask: SpellMaskThunderClap,
 
 		RageCost: core.RageCostOptions{
 			Cost: 20,

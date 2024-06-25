@@ -45,9 +45,11 @@ func (warrior *Warrior) applyWarAcademy() {
 	warrior.AddStaticMod(core.SpellModConfig{
 		ClassMask: SpellMaskMortalStrike |
 			SpellMaskRagingBlow |
+			SpellMaskRagingBlowOh |
 			SpellMaskDevastate |
 			SpellMaskVictoryRush |
-			SpellMaskSlam,
+			SpellMaskSlam |
+			SpellMaskSlamOh,
 		Kind:       core.SpellMod_DamageDone_Flat,
 		FloatValue: (0.05 * float64(warrior.Talents.WarAcademy)),
 	})

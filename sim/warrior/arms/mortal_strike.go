@@ -22,7 +22,7 @@ func (war *ArmsWarrior) RegisterMortalStrike() {
 		SpellSchool:    core.SpellSchoolPhysical,
 		ProcMask:       core.ProcMaskMeleeMHSpecial,
 		Flags:          core.SpellFlagAPL | core.SpellFlagIncludeTargetBonusDamage | core.SpellFlagMeleeMetrics,
-		ClassSpellMask: warrior.SpellMaskMortalStrike | warrior.SpellMaskSpecialAttack,
+		ClassSpellMask: warrior.SpellMaskMortalStrike,
 
 		RageCost: core.RageCostOptions{
 			Cost:   20,

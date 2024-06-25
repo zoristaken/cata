@@ -13,7 +13,7 @@ func (war *FuryWarrior) RegisterBloodthirst() {
 		SpellSchool:    core.SpellSchoolPhysical,
 		ProcMask:       core.ProcMaskMeleeMHSpecial,
 		Flags:          core.SpellFlagMeleeMetrics | core.SpellFlagIncludeTargetBonusDamage | core.SpellFlagAPL,
-		ClassSpellMask: warrior.SpellMaskBloodthirst | warrior.SpellMaskSpecialAttack,
+		ClassSpellMask: warrior.SpellMaskBloodthirst,
 
 		RageCost: core.RageCostOptions{
 			Cost:   20,

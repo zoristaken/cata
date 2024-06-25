@@ -21,12 +21,10 @@ const (
 	ProtTree       = 2
 )
 
-const SpellMaskNone int64 = 0
 const (
-	SpellMaskSpecialAttack int64 = 1 << iota
-
+	SpellMaskNone int64 = 0
 	// Abilities that don't cost rage and aren't attacks
-	SpellMaskBattleShout
+	SpellMaskBattleShout int64 = 1 << iota
 	SpellMaskBerserkerRage
 	SpellMaskCommandingShout
 	SpellMaskRecklessness
@@ -53,6 +51,7 @@ const (
 	SpellMaskRevenge
 	SpellMaskShatteringThrow
 	SpellMaskSlam
+	SpellMaskSlamOh
 	SpellMaskSunderArmor
 	SpellMaskThunderClap
 	SpellMaskWhirlwind
@@ -63,11 +62,35 @@ const (
 	SpellMaskVictoryRush
 	SpellMaskBloodthirst
 	SpellMaskRagingBlow
+	SpellMaskRagingBlowOh
 	SpellMaskMortalStrike
 	SpellMaskBladestorm
 	SpellMaskHeroicLeap
 
-	SpellMaskShouts = SpellMaskCommandingShout | SpellMaskBattleShout
+	SpellMaskShouts        = SpellMaskCommandingShout | SpellMaskBattleShout
+	SpellMaskSpecialAttack = SpellMaskHeroicStrike |
+		SpellMaskCleave |
+		SpellMaskSlam |
+		SpellMaskSlamOh |
+		SpellMaskWhirlwind |
+		SpellMaskExecute |
+		SpellMaskThunderClap |
+		SpellMaskHeroicLeap |
+		SpellMaskRevenge |
+		SpellMaskOverpower |
+		SpellMaskVictoryRush |
+		SpellMaskHeroicThrow |
+		SpellMaskShatteringThrow |
+		SpellMaskRagingBlow |
+		SpellMaskRagingBlowOh |
+		SpellMaskColossusSmash |
+		SpellMaskMortalStrike |
+		SpellMaskConcussionBlow |
+		SpellMaskDevastate |
+		SpellMaskBloodthirst |
+		SpellMaskShieldSlam |
+		SpellMaskBladestorm |
+		SpellMaskShockwave
 )
 
 const EnableOverpowerTag = "EnableOverpower"
