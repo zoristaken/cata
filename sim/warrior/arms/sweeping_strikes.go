@@ -14,6 +14,8 @@ func (war *ArmsWarrior) RegisterSweepingStrikes() {
 
 	actionID := core.ActionID{SpellID: 12328}
 
+	lastAppliedTime := time.Second * -1
+
 	var curDmg float64
 	ssHit := war.RegisterSpell(core.SpellConfig{
 		ActionID:    actionID,
@@ -38,10 +40,29 @@ func (war *ArmsWarrior) RegisterSweepingStrikes() {
 				return
 			}
 
-			if (spell == war.Execute && !sim.IsExecutePhase20()) || spell == war.Whirlwind {
+			if spell.Matches(warrior.SpellMaskWhirlwindOh) {
+				return
+			}
+
+			if spell.Matches(warrior.SpellMaskWhirlwind) {
 				curDmg = spell.Unit.MHNormalizedWeaponDamage(sim, spell.MeleeAttackPower())
 			} else {
 				curDmg = result.Damage
+			}
+
+			//sweeping strikes in cataclysm always copies a single hit, even from aoe abilities
+			aoeMasks := warrior.SpellMaskBladestorm |
+				warrior.SpellMaskCleave |
+				warrior.SpellMaskThunderClap |
+				warrior.SpellMaskWhirlwind |
+				warrior.SpellMaskHeroicLeap
+
+			if spell.Matches(aoeMasks) && lastAppliedTime == sim.CurrentTime {
+				return
+			}
+
+			if spell.Matches(aoeMasks) {
+				lastAppliedTime = sim.CurrentTime
 			}
 
 			// Undo armor reduction to get the raw damage value.
